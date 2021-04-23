@@ -31,26 +31,20 @@ namespace PF101PROJECT
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tictactoe_00 = new System.Windows.Forms.PictureBox();
-            this.tictactoe_01 = new System.Windows.Forms.PictureBox();
-            this.tictactoe_02 = new System.Windows.Forms.PictureBox();
-            this.tictactoe_10 = new System.Windows.Forms.PictureBox();
-            this.tictactoe_11 = new System.Windows.Forms.PictureBox();
-            this.tictactoe_12 = new System.Windows.Forms.PictureBox();
-            this.tictactoe_20 = new System.Windows.Forms.PictureBox();
-            this.tictactoe_21 = new System.Windows.Forms.PictureBox();
-            this.tictactoe_22 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_WinnerText = new System.Windows.Forms.Label();
+            this.label_TicTacToe = new System.Windows.Forms.Label();
+            this.button_StartO = new System.Windows.Forms.Button();
+            this.button_grid0 = new System.Windows.Forms.Button();
+            this.button_grid1 = new System.Windows.Forms.Button();
+            this.button_grid2 = new System.Windows.Forms.Button();
+            this.button_grid3 = new System.Windows.Forms.Button();
+            this.button_grid4 = new System.Windows.Forms.Button();
+            this.button_grid5 = new System.Windows.Forms.Button();
+            this.button_grid6 = new System.Windows.Forms.Button();
+            this.button_grid7 = new System.Windows.Forms.Button();
+            this.button_grid8 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_00)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_01)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_02)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_22)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -62,126 +56,138 @@ namespace PF101PROJECT
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // tictactoe_00
+            // label_WinnerText
             // 
-            this.tictactoe_00.BackColor = System.Drawing.Color.Transparent;
-            this.tictactoe_00.InitialImage = ((System.Drawing.Image)(resources.GetObject("tictactoe_00.InitialImage")));
-            this.tictactoe_00.Location = new System.Drawing.Point(246, 177);
-            this.tictactoe_00.Name = "tictactoe_00";
-            this.tictactoe_00.Size = new System.Drawing.Size(140, 140);
-            this.tictactoe_00.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tictactoe_00.TabIndex = 5;
-            this.tictactoe_00.TabStop = false;
-            this.tictactoe_00.Click += new System.EventHandler(this.tictactoe_x00_Click);
+            this.label_WinnerText.AutoSize = true;
+            this.label_WinnerText.Font = new System.Drawing.Font("Arial", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_WinnerText.ForeColor = System.Drawing.Color.Red;
+            this.label_WinnerText.Location = new System.Drawing.Point(255, 54);
+            this.label_WinnerText.Name = "label_WinnerText";
+            this.label_WinnerText.Size = new System.Drawing.Size(433, 56);
+            this.label_WinnerText.TabIndex = 22;
+            this.label_WinnerText.Text = "Winner Label Text";
             // 
-            // tictactoe_01
+            // label_TicTacToe
             // 
-            this.tictactoe_01.BackColor = System.Drawing.Color.Transparent;
-            this.tictactoe_01.InitialImage = ((System.Drawing.Image)(resources.GetObject("tictactoe_01.InitialImage")));
-            this.tictactoe_01.Location = new System.Drawing.Point(411, 177);
-            this.tictactoe_01.Name = "tictactoe_01";
-            this.tictactoe_01.Size = new System.Drawing.Size(140, 140);
-            this.tictactoe_01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tictactoe_01.TabIndex = 14;
-            this.tictactoe_01.TabStop = false;
-            this.tictactoe_01.Click += new System.EventHandler(this.tictactoe_01_Click);
+            this.label_TicTacToe.AutoSize = true;
+            this.label_TicTacToe.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_TicTacToe.ForeColor = System.Drawing.Color.Red;
+            this.label_TicTacToe.Location = new System.Drawing.Point(3, 161);
+            this.label_TicTacToe.Name = "label_TicTacToe";
+            this.label_TicTacToe.Size = new System.Drawing.Size(200, 45);
+            this.label_TicTacToe.TabIndex = 23;
+            this.label_TicTacToe.Text = "TicTacToe";
             // 
-            // tictactoe_02
+            // button_StartO
             // 
-            this.tictactoe_02.BackColor = System.Drawing.Color.Transparent;
-            this.tictactoe_02.InitialImage = ((System.Drawing.Image)(resources.GetObject("tictactoe_02.InitialImage")));
-            this.tictactoe_02.Location = new System.Drawing.Point(575, 177);
-            this.tictactoe_02.Name = "tictactoe_02";
-            this.tictactoe_02.Size = new System.Drawing.Size(140, 140);
-            this.tictactoe_02.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tictactoe_02.TabIndex = 15;
-            this.tictactoe_02.TabStop = false;
-            this.tictactoe_02.Click += new System.EventHandler(this.tictactoe_02_Click);
+            this.button_StartO.Location = new System.Drawing.Point(11, 235);
+            this.button_StartO.Name = "button_StartO";
+            this.button_StartO.Size = new System.Drawing.Size(193, 60);
+            this.button_StartO.TabIndex = 24;
+            this.button_StartO.Text = "Start as O";
+            this.button_StartO.UseVisualStyleBackColor = true;
+            this.button_StartO.Click += new System.EventHandler(this.button_StartO_Click);
             // 
-            // tictactoe_10
+            // button_grid0
             // 
-            this.tictactoe_10.BackColor = System.Drawing.Color.Transparent;
-            this.tictactoe_10.InitialImage = ((System.Drawing.Image)(resources.GetObject("tictactoe_10.InitialImage")));
-            this.tictactoe_10.Location = new System.Drawing.Point(246, 342);
-            this.tictactoe_10.Name = "tictactoe_10";
-            this.tictactoe_10.Size = new System.Drawing.Size(140, 140);
-            this.tictactoe_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tictactoe_10.TabIndex = 16;
-            this.tictactoe_10.TabStop = false;
-            this.tictactoe_10.Click += new System.EventHandler(this.tictactoe_10_Click);
+            this.button_grid0.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_grid0.Location = new System.Drawing.Point(239, 172);
+            this.button_grid0.Name = "button_grid0";
+            this.button_grid0.Size = new System.Drawing.Size(150, 150);
+            this.button_grid0.TabIndex = 25;
+            this.button_grid0.UseVisualStyleBackColor = true;
+            this.button_grid0.Click += new System.EventHandler(this.button_grid0_Click);
             // 
-            // tictactoe_11
+            // button_grid1
             // 
-            this.tictactoe_11.BackColor = System.Drawing.Color.Transparent;
-            this.tictactoe_11.InitialImage = ((System.Drawing.Image)(resources.GetObject("tictactoe_11.InitialImage")));
-            this.tictactoe_11.Location = new System.Drawing.Point(411, 342);
-            this.tictactoe_11.Name = "tictactoe_11";
-            this.tictactoe_11.Size = new System.Drawing.Size(140, 140);
-            this.tictactoe_11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tictactoe_11.TabIndex = 17;
-            this.tictactoe_11.TabStop = false;
-            this.tictactoe_11.Click += new System.EventHandler(this.tictactoe_11_Click);
+            this.button_grid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_grid1.Location = new System.Drawing.Point(406, 172);
+            this.button_grid1.Name = "button_grid1";
+            this.button_grid1.Size = new System.Drawing.Size(150, 150);
+            this.button_grid1.TabIndex = 34;
+            this.button_grid1.UseVisualStyleBackColor = true;
+            this.button_grid1.Click += new System.EventHandler(this.button_grid1_Click);
             // 
-            // tictactoe_12
+            // button_grid2
             // 
-            this.tictactoe_12.BackColor = System.Drawing.Color.Transparent;
-            this.tictactoe_12.InitialImage = ((System.Drawing.Image)(resources.GetObject("tictactoe_12.InitialImage")));
-            this.tictactoe_12.Location = new System.Drawing.Point(575, 342);
-            this.tictactoe_12.Name = "tictactoe_12";
-            this.tictactoe_12.Size = new System.Drawing.Size(140, 140);
-            this.tictactoe_12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tictactoe_12.TabIndex = 18;
-            this.tictactoe_12.TabStop = false;
-            this.tictactoe_12.Click += new System.EventHandler(this.tictactoe_12_Click);
+            this.button_grid2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_grid2.Location = new System.Drawing.Point(571, 172);
+            this.button_grid2.Name = "button_grid2";
+            this.button_grid2.Size = new System.Drawing.Size(150, 150);
+            this.button_grid2.TabIndex = 35;
+            this.button_grid2.UseVisualStyleBackColor = true;
+            this.button_grid2.Click += new System.EventHandler(this.button_grid2_Click);
             // 
-            // tictactoe_20
+            // button_grid3
             // 
-            this.tictactoe_20.BackColor = System.Drawing.Color.Transparent;
-            this.tictactoe_20.InitialImage = ((System.Drawing.Image)(resources.GetObject("tictactoe_20.InitialImage")));
-            this.tictactoe_20.Location = new System.Drawing.Point(246, 509);
-            this.tictactoe_20.Name = "tictactoe_20";
-            this.tictactoe_20.Size = new System.Drawing.Size(140, 140);
-            this.tictactoe_20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tictactoe_20.TabIndex = 19;
-            this.tictactoe_20.TabStop = false;
-            this.tictactoe_20.Click += new System.EventHandler(this.tictactoe_20_Click);
+            this.button_grid3.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_grid3.Location = new System.Drawing.Point(239, 337);
+            this.button_grid3.Name = "button_grid3";
+            this.button_grid3.Size = new System.Drawing.Size(150, 150);
+            this.button_grid3.TabIndex = 36;
+            this.button_grid3.UseVisualStyleBackColor = true;
+            this.button_grid3.Click += new System.EventHandler(this.button_grid3_Click);
             // 
-            // tictactoe_21
+            // button_grid4
             // 
-            this.tictactoe_21.BackColor = System.Drawing.Color.Transparent;
-            this.tictactoe_21.InitialImage = ((System.Drawing.Image)(resources.GetObject("tictactoe_21.InitialImage")));
-            this.tictactoe_21.Location = new System.Drawing.Point(411, 509);
-            this.tictactoe_21.Name = "tictactoe_21";
-            this.tictactoe_21.Size = new System.Drawing.Size(140, 140);
-            this.tictactoe_21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tictactoe_21.TabIndex = 20;
-            this.tictactoe_21.TabStop = false;
-            this.tictactoe_21.Click += new System.EventHandler(this.tictactoe_21_Click);
+            this.button_grid4.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_grid4.Location = new System.Drawing.Point(406, 337);
+            this.button_grid4.Name = "button_grid4";
+            this.button_grid4.Size = new System.Drawing.Size(150, 150);
+            this.button_grid4.TabIndex = 37;
+            this.button_grid4.UseVisualStyleBackColor = true;
+            this.button_grid4.Click += new System.EventHandler(this.button_grid4_Click);
             // 
-            // tictactoe_22
+            // button_grid5
             // 
-            this.tictactoe_22.BackColor = System.Drawing.Color.Transparent;
-            this.tictactoe_22.InitialImage = ((System.Drawing.Image)(resources.GetObject("tictactoe_22.InitialImage")));
-            this.tictactoe_22.Location = new System.Drawing.Point(575, 509);
-            this.tictactoe_22.Name = "tictactoe_22";
-            this.tictactoe_22.Size = new System.Drawing.Size(140, 140);
-            this.tictactoe_22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.tictactoe_22.TabIndex = 21;
-            this.tictactoe_22.TabStop = false;
-            this.tictactoe_22.Click += new System.EventHandler(this.tictactoe_22_Click);
+            this.button_grid5.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_grid5.Location = new System.Drawing.Point(571, 337);
+            this.button_grid5.Name = "button_grid5";
+            this.button_grid5.Size = new System.Drawing.Size(150, 150);
+            this.button_grid5.TabIndex = 38;
+            this.button_grid5.UseVisualStyleBackColor = true;
+            this.button_grid5.Click += new System.EventHandler(this.button_grid5_Click);
             // 
-            // label1
+            // button_grid6
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(497, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(433, 56);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Winner Label Text";
+            this.button_grid6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_grid6.Location = new System.Drawing.Point(239, 502);
+            this.button_grid6.Name = "button_grid6";
+            this.button_grid6.Size = new System.Drawing.Size(150, 150);
+            this.button_grid6.TabIndex = 39;
+            this.button_grid6.UseVisualStyleBackColor = true;
+            this.button_grid6.Click += new System.EventHandler(this.button_grid6_Click);
+            // 
+            // button_grid7
+            // 
+            this.button_grid7.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_grid7.Location = new System.Drawing.Point(406, 502);
+            this.button_grid7.Name = "button_grid7";
+            this.button_grid7.Size = new System.Drawing.Size(150, 150);
+            this.button_grid7.TabIndex = 40;
+            this.button_grid7.UseVisualStyleBackColor = true;
+            this.button_grid7.Click += new System.EventHandler(this.button_grid7_Click);
+            // 
+            // button_grid8
+            // 
+            this.button_grid8.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_grid8.Location = new System.Drawing.Point(571, 502);
+            this.button_grid8.Name = "button_grid8";
+            this.button_grid8.Size = new System.Drawing.Size(150, 150);
+            this.button_grid8.TabIndex = 41;
+            this.button_grid8.UseVisualStyleBackColor = true;
+            this.button_grid8.Click += new System.EventHandler(this.button_grid8_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(11, 337);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(193, 60);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "Start as X";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -190,16 +196,19 @@ namespace PF101PROJECT
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.ClientSize = new System.Drawing.Size(942, 673);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tictactoe_22);
-            this.Controls.Add(this.tictactoe_21);
-            this.Controls.Add(this.tictactoe_20);
-            this.Controls.Add(this.tictactoe_12);
-            this.Controls.Add(this.tictactoe_11);
-            this.Controls.Add(this.tictactoe_10);
-            this.Controls.Add(this.tictactoe_02);
-            this.Controls.Add(this.tictactoe_01);
-            this.Controls.Add(this.tictactoe_00);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_grid8);
+            this.Controls.Add(this.button_grid7);
+            this.Controls.Add(this.button_grid6);
+            this.Controls.Add(this.button_grid5);
+            this.Controls.Add(this.button_grid4);
+            this.Controls.Add(this.button_grid3);
+            this.Controls.Add(this.button_grid2);
+            this.Controls.Add(this.button_grid1);
+            this.Controls.Add(this.button_grid0);
+            this.Controls.Add(this.button_StartO);
+            this.Controls.Add(this.label_TicTacToe);
+            this.Controls.Add(this.label_WinnerText);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -208,15 +217,6 @@ namespace PF101PROJECT
             this.Text = "TIC - TAC - TOE";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_00)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_01)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_02)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tictactoe_22)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,16 +225,19 @@ namespace PF101PROJECT
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox tictactoe_00;
-        private System.Windows.Forms.PictureBox tictactoe_01;
-        private System.Windows.Forms.PictureBox tictactoe_02;
-        private System.Windows.Forms.PictureBox tictactoe_10;
-        private System.Windows.Forms.PictureBox tictactoe_11;
-        private System.Windows.Forms.PictureBox tictactoe_12;
-        private System.Windows.Forms.PictureBox tictactoe_20;
-        private System.Windows.Forms.PictureBox tictactoe_21;
-        private System.Windows.Forms.PictureBox tictactoe_22;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_WinnerText;
+        private System.Windows.Forms.Label label_TicTacToe;
+        private System.Windows.Forms.Button button_StartO;
+        private System.Windows.Forms.Button button_grid0;
+        private System.Windows.Forms.Button button_grid1;
+        private System.Windows.Forms.Button button_grid2;
+        private System.Windows.Forms.Button button_grid3;
+        private System.Windows.Forms.Button button_grid4;
+        private System.Windows.Forms.Button button_grid5;
+        private System.Windows.Forms.Button button_grid6;
+        private System.Windows.Forms.Button button_grid7;
+        private System.Windows.Forms.Button button_grid8;
+        private System.Windows.Forms.Button button1;
     }
 }
 

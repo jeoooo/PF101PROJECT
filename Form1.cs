@@ -15,233 +15,252 @@ namespace PF101PROJECT
 
 
         int[] GameArrayGrid = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        bool handlePlayerTurn = true; //true = o false = x
+        bool handlePlayerOTurn = true; //true = o false = x
 
-        Bitmap circle = Properties.Resources.o_symbol;
-        Bitmap cross = Properties.Resources.x_symbol;
+
 
         public Form1()
         {
             InitializeComponent();
 
-            InitializeGameState();
+            label_WinnerText.Visible = true;
 
-        }
-
-        private void InitializeGameState()
-        {
-            int[] GameArrayGrid = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             
         }
 
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
+           
 
         }
 
-        private void tictactoe_x00_Click(object sender, EventArgs e)
+
+
+        private void button_grid0_Click(object sender, EventArgs e)
         {
-            if (handlePlayerTurn)
+            if (handlePlayerOTurn)
             {
-                if (GameArrayGrid[0] == 0)
-                {
-                    GameArrayGrid[0] = 1;
-                    tictactoe_00.Image = circle;
-                    handlePlayerTurn = false;
-                }
+                GameArrayGrid[0] = 1;
+                button_grid0.Text = "O";
+                button_grid0.Enabled = false;
+                handlePlayerOTurn = false;
             }
             else
             {
-                if (GameArrayGrid[0] == 0)
-                {
-                    GameArrayGrid[0] = -1;
-                    tictactoe_00.Image = cross;
-                    handlePlayerTurn = true;
-                }
+                GameArrayGrid[0] = -1;
+                button_grid0.Text = "X";
+                button_grid0.Enabled = false;
+                handlePlayerOTurn = true;
             }
+            ConsoleCheckGrid();
         }
 
-        private void tictactoe_01_Click(object sender, EventArgs e)
+        private void button_grid1_Click(object sender, EventArgs e)
         {
-            if (handlePlayerTurn)
+            if (handlePlayerOTurn)
             {
-                if (GameArrayGrid[1] == 0)
-                {
-                    GameArrayGrid[1] = 1;
-                    tictactoe_01.Image = circle;
-                    handlePlayerTurn = false;
-                }
+                GameArrayGrid[1] = 1;
+                button_grid1.Text = "O";
+                button_grid1.Enabled = false;
+                handlePlayerOTurn = false;
             }
             else
             {
-                if (GameArrayGrid[1] == 0)
-                {
-                    GameArrayGrid[1] = -1;
-                    tictactoe_01.Image = cross;
-                    handlePlayerTurn = true;
-                }
+                GameArrayGrid[1] = -1;
+                button_grid1.Text = "X";
+                button_grid1.Enabled = false;
+                handlePlayerOTurn = true;
             }
+            ConsoleCheckGrid();
         }
 
-        private void tictactoe_02_Click(object sender, EventArgs e)
+        private void button_grid2_Click(object sender, EventArgs e)
         {
-            if (handlePlayerTurn)
+            if (handlePlayerOTurn)
             {
-                if (GameArrayGrid[2] == 0)
-                {
-                    GameArrayGrid[2] = 1;
-                    tictactoe_02.Image = circle;
-                    handlePlayerTurn = false;
-                }
+                GameArrayGrid[2] = 1;
+                button_grid2.Text = "O";
+                button_grid2.Enabled = false;
+                handlePlayerOTurn = false;
             }
             else
             {
-                if (GameArrayGrid[2] == 0)
-                {
-                    GameArrayGrid[2] = -1;
-                    tictactoe_02.Image = cross;
-                    handlePlayerTurn = true;
-                }
+                GameArrayGrid[2] = -1;
+                button_grid2.Text = "X";
+                button_grid2.Enabled = false;
+                handlePlayerOTurn = true;
             }
+            ConsoleCheckGrid();
+        }
+
+        private void button_grid3_Click(object sender, EventArgs e)
+        {
+            if (handlePlayerOTurn)
+            {
+                GameArrayGrid[3] = 1;
+                button_grid3.Text = "O";
+                button_grid3.Enabled = false;
+                handlePlayerOTurn = false;
+            }
+            else
+            {
+                GameArrayGrid[3] = -1;
+                button_grid3.Text = "X";
+                button_grid3.Enabled = false;
+                handlePlayerOTurn = true;
+            }
+            ConsoleCheckGrid();
+        }
+
+        private void button_grid4_Click(object sender, EventArgs e)
+        {
+            if (handlePlayerOTurn)
+            {
+                GameArrayGrid[4] = 1;
+                button_grid4.Text = "O";
+                button_grid4.Enabled = false;
+                handlePlayerOTurn = false;
+            }
+            else
+            {
+                GameArrayGrid[4] = -1;
+                button_grid4.Text = "X";
+                button_grid4.Enabled = false;
+                handlePlayerOTurn = true;
+            }
+            ConsoleCheckGrid();
+        }
+
+        private void button_grid5_Click(object sender, EventArgs e)
+        {
+            if (handlePlayerOTurn)
+            {
+                GameArrayGrid[5] = 1;
+                button_grid5.Text = "O";
+                button_grid5.Enabled = false;
+                handlePlayerOTurn = false;
+            }
+            else
+            {
+                GameArrayGrid[5] = -1;
+                button_grid5.Text = "X";
+                button_grid5.Enabled = false;
+                handlePlayerOTurn = true;
+            }
+            ConsoleCheckGrid();
+        }
+
+        private void button_grid6_Click(object sender, EventArgs e)
+        {
+            if (handlePlayerOTurn)
+            {
+                GameArrayGrid[6] = 1;
+                button_grid6.Text = "O";
+                button_grid6.Enabled = false;
+                handlePlayerOTurn = false;
+            }
+            else
+            {
+                GameArrayGrid[6] = -1;
+                button_grid6.Text = "X";
+                button_grid6.Enabled = false;
+                handlePlayerOTurn = true;
+            }
+            ConsoleCheckGrid();
+        }
+
+        private void button_grid7_Click(object sender, EventArgs e)
+        {
+            if (handlePlayerOTurn)
+            {
+                GameArrayGrid[7] = 1;
+                button_grid7.Text = "O";
+                button_grid7.Enabled = false;
+                handlePlayerOTurn = false;
+            }
+            else
+            {
+                GameArrayGrid[7] = -1;
+                button_grid7.Text = "X";
+                button_grid7.Enabled = false;
+                handlePlayerOTurn = true;
+            }
+            ConsoleCheckGrid();
+        }
+
+        private void button_grid8_Click(object sender, EventArgs e)
+        {
+            if (handlePlayerOTurn)
+            {
+                GameArrayGrid[8] = 1;
+                button_grid8.Text = "O";
+                button_grid8.Enabled = false;
+                handlePlayerOTurn = false;
+            }
+            else
+            {
+                GameArrayGrid[8] = -1;
+                button_grid8.Text = "X";
+                button_grid8.Enabled = false;
+                handlePlayerOTurn = true;
+            }
+            ConsoleCheckGrid();
+        }
+
+
+        private void button_StartO_Click(object sender, EventArgs e)
+        {
+            handlePlayerOTurn = true;
+            setButtons();
+            enableButtons();
+        }
+
+        private void enableButtons()
+        {
+            button_grid0.Enabled = true;
+            button_grid1.Enabled = true;
+            button_grid2.Enabled = true;
+            button_grid3.Enabled = true;
+            button_grid4.Enabled = true;
+            button_grid5.Enabled = true;
+            button_grid6.Enabled = true;
+            button_grid7.Enabled = true;
+            button_grid8.Enabled = true;
+        }
+
+        private void setButtons()
+        {
+            for(int i = 0; i < GameArrayGrid.Length; i++)
+            {
+                GameArrayGrid[i] = 0;
+            }
+
             
+            button_grid0.Text = "";
+            button_grid1.Text = "";
+            button_grid2.Text = "";
+            button_grid3.Text = "";
+            button_grid4.Text = "";
+            button_grid5.Text = "";
+            button_grid6.Text = "";
+            button_grid7.Text = "";
+            button_grid8.Text = "";
         }
 
-        private void tictactoe_10_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (handlePlayerTurn)
-            {
-                if (GameArrayGrid[3] == 0)
-                {
-                    GameArrayGrid[3] = 1;
-                    tictactoe_10.Image = circle;
-                    handlePlayerTurn = false;
-                }
-            }
-            else
-            {
-                if (GameArrayGrid[3] == 0)
-                {
-                    GameArrayGrid[3] = -1;
-                    tictactoe_10.Image = cross;
-                    handlePlayerTurn = true;
-                }
-            }
+            handlePlayerOTurn = false;
+            setButtons();
+            enableButtons();
         }
 
-        private void tictactoe_11_Click(object sender, EventArgs e)
+        private void ConsoleCheckGrid()
         {
-            if (handlePlayerTurn)
-            {
-                if (GameArrayGrid[4] == 0)
-                {
-                    GameArrayGrid[4] = 1;
-                    tictactoe_11.Image = circle;
-                    handlePlayerTurn = false;
-                }
-            }
-            else
-            {
-                if (GameArrayGrid[4] == 0)
-                {
-                    GameArrayGrid[4] = -1;
-                    tictactoe_11.Image = cross;
-                    handlePlayerTurn = true;
-                }
-            }
-        }
-
-        private void tictactoe_12_Click(object sender, EventArgs e)
-        {
-            if (handlePlayerTurn)
-            {
-                if (GameArrayGrid[5] == 0)
-                {
-                    GameArrayGrid[5] = 1;
-                    tictactoe_12.Image = circle;
-                    handlePlayerTurn = false;
-                }
-            }
-            else
-            {
-                if (GameArrayGrid[5] == 0)
-                {
-                    GameArrayGrid[5] = -1;
-                    tictactoe_12.Image = cross;
-                    handlePlayerTurn = true;
-                }
-            }
-        }
-
-        private void tictactoe_20_Click(object sender, EventArgs e)
-        {
-            if (handlePlayerTurn)
-            {
-                if (GameArrayGrid[6] == 0)
-                {
-                    GameArrayGrid[6] = 1;
-                    tictactoe_20.Image = circle;
-                    handlePlayerTurn = false;
-                }
-            }
-            else
-            {
-                if (GameArrayGrid[6] == 0)
-                {
-                    GameArrayGrid[6] = -1;
-                    tictactoe_20.Image = cross;
-                    handlePlayerTurn = true;
-                }
-            }
-        }
-
-        private void tictactoe_21_Click(object sender, EventArgs e)
-        {
-            if (handlePlayerTurn)
-            {
-                if (GameArrayGrid[7] == 0)
-                {
-                    GameArrayGrid[7] = 1;
-                    tictactoe_21.Image = circle;
-                    handlePlayerTurn = false;
-                }
-            }
-            else
-            {
-                if (GameArrayGrid[7] == 0)
-                {
-                    GameArrayGrid[7] = -1;
-                    tictactoe_21.Image = cross;
-                    handlePlayerTurn = true;
-                }
-            }
-        }
-
-        private void tictactoe_22_Click(object sender, EventArgs e)
-        {
-            if (handlePlayerTurn)
-            {
-                if (GameArrayGrid[8] == 0)
-                {
-                    GameArrayGrid[8] = 1;
-                    tictactoe_22.Image = circle;
-                    handlePlayerTurn = false;
-                }
-            }
-            else
-            {
-                if (GameArrayGrid[8] == 0)
-                {
-                    GameArrayGrid[8] = -1;
-                    tictactoe_22.Image = cross;
-                    handlePlayerTurn = true;
-                }
-            }
+            Console.WriteLine("[ " + GameArrayGrid[0] + ", " + GameArrayGrid[1] + ", " + GameArrayGrid[2] + "]\n" +
+                              "[ " + GameArrayGrid[3] + ", " + GameArrayGrid[4] + ", " + GameArrayGrid[5] + "]\n" +
+                              "[ " + GameArrayGrid[6] + ", " + GameArrayGrid[7] + ", " + GameArrayGrid[8] + "]\n");
         }
     }
 }
