@@ -215,6 +215,7 @@ namespace PF101PROJECT
             handlePlayerOTurn = true;
             setButtons();
             enableButtons();
+            label_WinnerText.Text = "Winner Label Text";
         }
 
         private void enableButtons()
@@ -228,6 +229,19 @@ namespace PF101PROJECT
             button_grid6.Enabled = true;
             button_grid7.Enabled = true;
             button_grid8.Enabled = true;
+        }
+
+        private void disableButtons()
+        {
+            button_grid0.Enabled = false;
+            button_grid1.Enabled = false;
+            button_grid2.Enabled = false;
+            button_grid3.Enabled = false;
+            button_grid4.Enabled = false;
+            button_grid5.Enabled = false;
+            button_grid6.Enabled = false;
+            button_grid7.Enabled = false;
+            button_grid8.Enabled = false;
         }
 
         private void setButtons()
@@ -254,13 +268,75 @@ namespace PF101PROJECT
             handlePlayerOTurn = false;
             setButtons();
             enableButtons();
+            label_WinnerText.Text = "Winner Label Text";
         }
 
         private void ConsoleCheckGrid()
         {
+            Console.WriteLine("\nGame Grid: \n");
             Console.WriteLine("[ " + GameArrayGrid[0] + ", " + GameArrayGrid[1] + ", " + GameArrayGrid[2] + "]\n" +
                               "[ " + GameArrayGrid[3] + ", " + GameArrayGrid[4] + ", " + GameArrayGrid[5] + "]\n" +
                               "[ " + GameArrayGrid[6] + ", " + GameArrayGrid[7] + ", " + GameArrayGrid[8] + "]\n");
+            CheckWinner();
+        }
+
+        private void CheckWinner()
+        {
+            int Row1, Row2, Row3;
+            int Column1, Column2, Column3;
+            int Diagonal1, Diagonal2;
+
+            Row1 = GameArrayGrid[0] + GameArrayGrid[1] + GameArrayGrid[2];
+            Row2 = GameArrayGrid[3] + GameArrayGrid[4] + GameArrayGrid[5];
+            Row3 = GameArrayGrid[6] + GameArrayGrid[7] + GameArrayGrid[8];
+
+            Column1 = GameArrayGrid[0] + GameArrayGrid[3] + GameArrayGrid[6];
+            Column2 = GameArrayGrid[1] + GameArrayGrid[4] + GameArrayGrid[7];
+            Column3 = GameArrayGrid[2] + GameArrayGrid[5] + GameArrayGrid[8];
+
+            Diagonal1 = GameArrayGrid[0] + GameArrayGrid[4] + GameArrayGrid[8];
+            Diagonal2 = GameArrayGrid[2] + GameArrayGrid[4] + GameArrayGrid[6];
+
+            Console.WriteLine("Row 1: " + Row1 + "\n" +
+                              "Row 2: " + Row2 + "\n" +
+                              "Row 3: " + Row3 + "\n" +
+                              "Column 1: " + Column1 + "\n" +
+                              "Column 2: " + Column2 + "\n" +
+                              "Column 3: " + Column3 + "\n" +
+                              "Diagonal 1: " + Diagonal1 + "\n" +
+                              "Diagonal 2: " + Diagonal2 + "\n" );
+
+            if (Row1.Equals(3) || Row2.Equals(3) || Row3.Equals(3)) // CHECK FOR ROW WIN FOR O
+            {
+                label_WinnerText.Text = "Winner: Player O";
+                disableButtons();
+            }
+            else if (Row1.Equals(-3) || Row2.Equals(-3) || Row3.Equals(-3)) //CHECK FOR ROW WIN FOR X
+            {
+                label_WinnerText.Text = "Winner: Player X";
+                disableButtons();
+            }
+            else if (Column1.Equals(3) || Column2.Equals(3) || Column3.Equals(3))
+            {
+                label_WinnerText.Text = "Winner: Player O";
+                disableButtons();
+            }
+            else if (Column1.Equals(-3) || Column2.Equals(-3) || Column3.Equals(-3))
+            {
+                label_WinnerText.Text = "Winner: Player X";
+                disableButtons();
+            }
+            else if(Diagonal1.Equals(3) || Diagonal2.Equals(3))
+            {
+                label_WinnerText.Text = "Winner: Player O";
+                disableButtons();
+            }
+            else if (Diagonal1.Equals(-3) || Diagonal2.Equals(-3))
+            {
+                label_WinnerText.Text = "Winner: Player X";
+                disableButtons();
+            }
+
         }
     }
 }
