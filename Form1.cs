@@ -278,6 +278,22 @@ namespace PF101PROJECT
                               "[ " + GameArrayGrid[3] + ", " + GameArrayGrid[4] + ", " + GameArrayGrid[5] + "]\n" +
                               "[ " + GameArrayGrid[6] + ", " + GameArrayGrid[7] + ", " + GameArrayGrid[8] + "]\n");
             CheckWinner();
+
+            Console.WriteLine("is board full:  " + isBoardFull());
+        }
+
+        private bool isBoardFull()
+        {
+            if(!button_grid0.Enabled && !button_grid1.Enabled && !button_grid2.Enabled
+             && !button_grid3.Enabled && !button_grid4.Enabled && !button_grid5.Enabled
+             && !button_grid6.Enabled && !button_grid7.Enabled && !button_grid8.Enabled)
+            { // check if all parts of the grid is disabled
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private void CheckWinner()
@@ -336,6 +352,12 @@ namespace PF101PROJECT
                 label_WinnerText.Text = "Winner: Player X";
                 disableButtons();
             }
+            else if (isBoardFull())
+            {
+                label_WinnerText.Text = "It's a Draw!";
+                disableButtons();
+            }
+            
 
         }
     }
