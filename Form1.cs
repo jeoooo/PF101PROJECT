@@ -23,7 +23,7 @@ namespace PF101PROJECT
         {
             InitializeComponent();
 
-            label_WinnerText.Visible = true;
+            label_WinnerText.Visible = false;
 
             
         }
@@ -215,6 +215,7 @@ namespace PF101PROJECT
             handlePlayerOTurn = true;
             setButtons();
             enableButtons();
+            label_WinnerText.Visible = false;
             label_WinnerText.Text = "Winner Label Text";
         }
 
@@ -268,6 +269,7 @@ namespace PF101PROJECT
             handlePlayerOTurn = false;
             setButtons();
             enableButtons();
+            label_WinnerText.Visible = false;
             label_WinnerText.Text = "Winner Label Text";
         }
 
@@ -324,36 +326,43 @@ namespace PF101PROJECT
 
             if (Row1.Equals(3) || Row2.Equals(3) || Row3.Equals(3)) // CHECK FOR ROW WIN FOR O
             {
+                label_WinnerText.Visible = true;
                 label_WinnerText.Text = "Winner: Player O";
                 disableButtons();
             }
             else if (Row1.Equals(-3) || Row2.Equals(-3) || Row3.Equals(-3)) //CHECK FOR ROW WIN FOR X
             {
+                label_WinnerText.Visible = true;
                 label_WinnerText.Text = "Winner: Player X";
                 disableButtons();
             }
             else if (Column1.Equals(3) || Column2.Equals(3) || Column3.Equals(3))
             {
+                label_WinnerText.Visible = true;
                 label_WinnerText.Text = "Winner: Player O";
                 disableButtons();
             }
             else if (Column1.Equals(-3) || Column2.Equals(-3) || Column3.Equals(-3))
             {
+                label_WinnerText.Visible = true;
                 label_WinnerText.Text = "Winner: Player X";
                 disableButtons();
             }
             else if(Diagonal1.Equals(3) || Diagonal2.Equals(3))
             {
+                label_WinnerText.Visible = true;
                 label_WinnerText.Text = "Winner: Player O";
                 disableButtons();
             }
             else if (Diagonal1.Equals(-3) || Diagonal2.Equals(-3))
             {
+                label_WinnerText.Visible = true;
                 label_WinnerText.Text = "Winner: Player X";
                 disableButtons();
             }
             else if (isBoardFull())
             {
+                label_WinnerText.Visible = true;
                 label_WinnerText.Text = "It's a Draw!";
                 disableButtons();
             }
