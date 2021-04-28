@@ -30,12 +30,6 @@ namespace PF101PROJECT
 
         
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-           
-
-        }
-
 
 
         private void button_grid0_Click(object sender, EventArgs e)

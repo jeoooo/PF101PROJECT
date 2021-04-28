@@ -228,8 +228,7 @@ namespace PF101PROJECT
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "v";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "TIC-TAC-TOE";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
